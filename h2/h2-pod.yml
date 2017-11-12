@@ -8,7 +8,7 @@ spec:
   containers:
   - name: h2
     image: jqayyum/h2
-    args: ["-baseDir", "/data/h2"]
+    #args: ["-baseDir", "/data/h2"]
     volumeMounts:
     - name: h2-storage
       mountPath: /data/h2

@@ -5,19 +5,13 @@ metadata:
 spec:
   ports:
   - name: tcp-port
-    port: 31001
-    nodePort: 31001
-    targetPort: 9092
+    port: 9092
     protocol: TCP
   - name: pg-port
-    port: 31002
-    nodePort: 31002
-    targetPort: 5435
+    port: 5435
     protocol: TCP
   - name: console-port
-    port: 31003
-    nodePort: 31003
-    targetPort: 8082
+    port: 8082
     protocol: TCP
 
   selector:
