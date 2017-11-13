@@ -5,8 +5,8 @@
 #### Build & Push Docker Image
 * docker build . -t jqayyum/h2 && docker push jqayyum/h2
 
-#### Create Kubernetes Pod & Service
-* kubectl create -f h2-pod.yml
+#### Create Kubernetes Deployment & Service
+* kubectl create -f h2-deployment.yml
 * kubectl create -f h2-service.yml
 
 ##### Find service url and ports
@@ -19,8 +19,6 @@ Note:
 * H2 pod is using persistent volumes although local ones
 * H2 service is exposing random ports, in order to demonstrate service discovery
 
-TODO:
-* Create H2 deployment
 
 ## Setup Apacha Camel (Producer)
 

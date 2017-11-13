@@ -1,0 +1,32 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: h2-deployment
+  labels:
+    app: h2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: h2
+  template:
+    metadata:
+      labels:
+        app: h2
+    spec:
+      containers:
+      - name: h2
+        image: jqayyum/h2
+        volumeMounts:
+        - name: h2-storage
+          mountPath: /data/h2
+        ports:
+        - name: tcp-port
+          containerPort: 9092
+        - name: pg-port
+          containerPort: 5435
+        - name: console-port
+          containerPort: 8082
+      volumes:
+      - name: h2-storage
+        emptyDir: {}  
