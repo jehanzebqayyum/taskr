@@ -1,4 +1,5 @@
 
+![Diagram](https://github.com/jehanzebqayyum/taskr/blob/master/taskr-architecture.png)
 
 ## Setup H2
 
